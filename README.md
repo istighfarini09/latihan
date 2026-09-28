@@ -1,5 +1,8 @@
-# Tugas2Algoritma  
-## Analisis komponen  
+# tugas-algoritma 2
+**Nama:** istighfarini  
+**NIM:** 1251170012  
+**kelas:** 3B
+ 
 ### 1. Variabel dan tipe data  
 
 | No | variabel | tipedata | keterangan |  
@@ -12,12 +15,11 @@
 | 6 | total_bayar | real | total yang harus di bayar setelah diskon | 
 
 ### 2. Struktur kontrol yang digunakan  
+sekuensial: langkah-langkah yang dikerjakan secara berurutan dari atas ke bawah, yaitu memasukkan data status member, jumlah buku, total belanja, menghitung nominal diskon dan total bayar, lalu menampilkan hasilnya melalui output.  
+percabangan: menentukan diskon sesuai aturan toko dalam bentuk IF-ELSE bertingkat, karena penentuan diskon bergantung pada dua tahap yaitu tahap pertama membedakan pelanggan yang member dan non member. tahap kedua mengecek syarat tambahan pada masing-masing jalur, yaitu kalau member, dapat diskon 10%. lalu dicek lagi, jika total belanja >= 200000 dan jumlah buku >= 3, diskonnya jadi 15%. jika bukan member, dicek apakah total belanjanya >= 300000. kalau iya diskonnya 5%, kalau kurang dari 300000 diskonnya 0% atau tidak ada diskon.  
+perulangan: digunakan untuk validasi input. jika total belanjanya kurang dari 0 atau jumlah bukunya kurang dari 1, tampilkan pesan kesalahan dan meminta data dimasukkan ulang. diulang terus sampai datanya benar.perulangan terus berjalan selama total belanja bernilai negatif atau jumlah bukunya kurang dari satu, dan baru berhenti setelah kedua syarat terpenuhi secara bersamaan.  
 
-| struktur kontrol | digunakan untuk | 
-| --- | --- |
-| Sequence | Alur umum  program: input&rarr; validasi&rarr; hitung&rarr; output | 
-| Iteration | validasi input: mengulang permintaan input sealama 'total_awal < 0' atau 'jumlah_buku < 1' | 
-| Selection | menentukan persentase diskon berdasarkan status member dan syarat tambahan (belanja dan jumlah buku) |  
+ 
 
 --- 
 ## Pseudocode  
@@ -71,9 +73,9 @@ OUTPUT(total_bayar)
 
 ### kasus A: is_member = true, total_awal = 250000, jumlah_buku = 4  
 
-| Langkah | aksi | is_number | total_awal | jumlah_buku | kondisi loop | persen_diskon | nominal_diskon | total_bayar | 
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | input is_member | true | - | - | - | - | - | - | 
+| Langkah | aksi | total_awal | jumlah_buku | persen_diskon | nominal_diskon | total_bayar | 
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | input is_member | - | - | - | - | - | - | 
 | 2 | input total_awal, jumlah_buku | true | 250000 | 4 | - | - | - | - | 
 | 3 | cek WHILE: (250000<0) OR (4<1) | true | 250000 | 4 | false &rarr; loop tidak dijalankan | - | - | - | 
 | 4 | cek IF is_number = true | true | 250000 | 4 | - | 0.10 | - | - | 
@@ -84,4 +86,3 @@ OUTPUT(total_bayar)
 
 ### kasus B: is_member = false, total awal = 350000, jumlah buku = 2 
 
-| 
