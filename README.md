@@ -99,4 +99,5 @@ OUTPUT(total_bayar)
 | 4 | cek diskon: non member & belanja < 300000 &larr; diskonnya 0% | 100000 | 1 | 0% | 0 | - | 
 | 5 |hitung hasil akhir | 100000 | 1 | 0% |  **0** | **100000** |  
 
---- 
+---
+
